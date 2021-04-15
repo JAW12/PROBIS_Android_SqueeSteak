@@ -33,7 +33,12 @@ public class MainActivity extends AppCompatActivity {
         if (savedInstanceState == null){
             binding.navigation.setSelectedItemId(R.id.menu_utama);
         }
-        setTitle("05 | INV2021032000001");
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        setTitle(String.format("%02d", Integer.valueOf(Preferences.getMeja(getApplicationContext()))) + " | INV2021032000001");
     }
 
     public void setTitle(String s){
@@ -56,6 +61,7 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.option_pengaturan:
                 intent = new Intent(getApplicationContext(), SettingActivity.class);
+                intent.putExtra("activity", "main");
                 startActivity(intent);
                 break;
         }

@@ -7,13 +7,13 @@
 
     <LinearLayout
         android:layout_width="0dp"
-        android:layout_height="200dp"
-        android:layout_marginStart="16dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginEnd="10dp"
         android:layout_marginBottom="8dp"
         android:orientation="horizontal"
-        android:weightSum="10"
+        android:weightSum="20"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -21,29 +21,31 @@
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="200dp"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_weight="7"
             android:contentDescription="Gambar Produk"
             android:scaleType="center"
-            tools:srcCompat="@tools:sample/backgrounds/scenic" />
+            tools:srcCompat="@drawable/no_image" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="300dp"
+            android:layout_width="0dp"
+            android:layout_weight="12"
             android:layout_height="match_parent"
-            android:layout_marginStart="15dp"
-            android:layout_marginLeft="5dp">
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp">
 
             <TextView
                 android:id="@+id/textNama"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:ellipsize="end"
                 android:fontFamily="sans-serif"
                 android:maxLines="1"
-                android:singleLine="false"
+                android:singleLine="true"
                 android:text="... Steak ... gr"
                 android:textColor="@color/colorDark"
-                android:textSize="24sp"
+                android:textSize="18sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -55,7 +57,7 @@
                 android:layout_height="0dp"
                 android:ellipsize="end"
                 android:fontFamily="sans-serif"
-                android:maxLines="3"
+                android:maxLines="5"
                 android:text="Steak ..."
                 android:textAlignment="textStart"
                 android:textColor="@color/colorDark"
@@ -69,7 +71,6 @@
                 android:id="@+id/textHarga"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
                 android:text="Rp. 93.000"
                 android:textColor="@color/colorDark"
                 android:textSize="18sp"
@@ -81,7 +82,8 @@
 
         <ImageView
             android:id="@+id/imageView2"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="match_parent"
             android:contentDescription=">"
             app:srcCompat="@drawable/ic_next" />
