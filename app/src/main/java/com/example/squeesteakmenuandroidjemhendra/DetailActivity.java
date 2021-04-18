@@ -12,7 +12,7 @@ import com.example.squeesteakmenuandroidjemhendra.databinding.ActivityMainBindin
 public class DetailActivity extends AppCompatActivity {
 
     private ActivityDetailBinding binding;
-    Menu menu;
+    Menu menu; // ini untuk retrieve data menu di detail
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,7 +23,6 @@ public class DetailActivity extends AppCompatActivity {
 
         if(getIntent().hasExtra("menu")){
             menu = getIntent().getParcelableExtra("menu");
-
 
             binding.textNama.setText(menu.getNama());
             String harga = String.format("%,d", menu.getHarga()).replace(',', '.');
