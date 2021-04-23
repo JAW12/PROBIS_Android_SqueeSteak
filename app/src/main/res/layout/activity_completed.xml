@@ -7,6 +7,23 @@
     android:background="@color/colorPrimary"
     tools:context=".CompletedActivity">
 
+    <Button
+        android:id="@+id/btnKonfirmasi"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/rounded_success"
+        android:letterSpacing="0.2"
+        android:paddingHorizontal="20dp"
+        android:text="KONFIRMASI"
+        android:textColor="@color/colorWhite"
+        android:textSize="18sp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textPetunjuk" />
+
     <pl.droidsonroids.gif.GifImageView
         android:id="@+id/gifLogo"
         android:layout_width="0dp"
@@ -67,5 +84,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textInvoice" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
