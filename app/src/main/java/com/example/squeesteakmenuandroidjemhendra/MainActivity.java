@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
 
     private ActivityMainBinding binding;
     Intent intent;
-
+    public static String kode;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -125,6 +125,7 @@ public class MainActivity extends AppCompatActivity {
                             int code = jsonObject.getInt("code");
                             String message = jsonObject.getString("message");
                             if(code == 1){
+                                kode = message;
                                 setTitle(String.format("%02d", Integer.valueOf(Preferences.getMeja(getApplicationContext()))) + " | " + message);
                             }
                             else{

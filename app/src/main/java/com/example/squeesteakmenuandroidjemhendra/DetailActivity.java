@@ -84,6 +84,7 @@ public class DetailActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 addItem();
+
             }
         });
     }
@@ -122,9 +123,10 @@ public class DetailActivity extends AppCompatActivity {
             protected Map<String, String> getParams() throws AuthFailureError {
                 Map<String, String> params = new HashMap<>();
                 params.put("id", String.valueOf(menu.getId()));
-                params.put("kode", String.valueOf(getTitle()));
+                params.put("kode", String.valueOf(MainActivity.kode));
                 params.put("harga", String.valueOf(menu.getHarga()));
                 params.put("jumlah", binding.textSubtotal.getText().toString());
+                params.put("subtotal", String.valueOf(menu.getHarga() * Integer.parseInt(binding.textSubtotal.getText().toString())));
                 params.put("keterangan", binding.editKeterangan.getText().toString());
                 return params;
             }
