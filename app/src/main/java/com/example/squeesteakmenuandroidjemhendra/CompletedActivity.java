@@ -32,6 +32,7 @@ public class CompletedActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityCompletedBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+        binding.textInvoice.setText(MainActivity.kode);
         binding.btnKonfirmasi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
