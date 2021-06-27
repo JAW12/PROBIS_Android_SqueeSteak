@@ -9,6 +9,7 @@ import androidx.appcompat.view.menu.MenuView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 import com.example.squeesteakmenuandroidjemhendra.databinding.ItemProdukBinding;
 
 import java.util.ArrayList;
@@ -40,6 +41,7 @@ public class MenuAdapter extends
 
         Glide.with(holder.binding.imageView.getContext())
                 .load(holder.binding.textDeskripsi.getContext().getString(R.string.img) + listMenu.get(position).getNama_kategori() + "/" + listMenu.get(position).getUrl())
+                .apply(new RequestOptions().override(600, 200))
                 .into(holder.binding.imageView);
 
     }

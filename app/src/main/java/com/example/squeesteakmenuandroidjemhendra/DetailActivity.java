@@ -16,6 +16,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 import com.example.squeesteakmenuandroidjemhendra.databinding.ActivityDetailBinding;
 import com.example.squeesteakmenuandroidjemhendra.databinding.ActivityMainBinding;
 
@@ -47,6 +48,7 @@ public class DetailActivity extends AppCompatActivity {
             binding.btnPesan.setText("Rp. " + "0");
             Glide.with(getApplicationContext())
                     .load(getString(R.string.img) + menu.getNama_kategori() + "/" + menu.getUrl())
+                    .apply(new RequestOptions().override(600, 200))
                     .into(binding.imgProduk);
         }
         binding.textPetunjuk.setText(Html.fromHtml("Ubah jumlah <font color='#219653'>DIATAS</font> untuk menambahkan menu!"));
